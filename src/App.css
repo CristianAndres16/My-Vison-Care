@@ -1,0 +1,89 @@
+:root {
+  --fondo: #171310;
+  --tarjeta: #241d18;
+  --cafe: #9c704f;
+  --texto: #f4eee8;
+  --texto-suave: #cbbdb2;
+}
+
+main {
+  min-height: 100vh;
+  background: var(--fondo);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px clamp(20px, 8vw, 112px);
+  border-bottom: 1px solid #3b2b21;
+}
+
+header p {
+  margin: 0;
+  color: var(--texto);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+header span {
+  color: var(--texto-suave);
+}
+
+section {
+  width: calc(100% - 40px);
+  max-width: 720px;
+  margin: 80px auto;
+  padding: 48px;
+  background: var(--tarjeta);
+  border: 1px solid #4a3628;
+  border-radius: 20px;
+}
+
+section > p:first-child {
+  margin: 0 0 14px;
+  color: var(--cafe);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 16px;
+  color: var(--texto);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+section > p:last-of-type {
+  margin-bottom: 28px;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+
+button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--cafe);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #805536;
+}
+
+@media (max-width: 600px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  section {
+    margin: 44px auto;
+    padding: 32px 24px;
+  }
+}
